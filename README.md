@@ -51,8 +51,8 @@ To get words in the crossword, we can **go through all of the cells and check fo
 
 ```
 get_word(cell) => {
-                    skip, if cell is not a letter
-                    skip, if words already exist
+                    skip    , if cell is not a letter
+                    skip    , if words already exist
                     add word, if word didn't exist
                   }
 ```
@@ -61,10 +61,10 @@ To process a word we can do the following:
 
 ```
 process(word) => {
-                    skip, if state(word) = no_found
+                    skip            , if state(word) = no_found
                     find_match(word), if state(word) = some_found
-                    skip, if state(word) = all_found
-                    unassign(word), if state(word) = invalid
+                    skip            , if state(word) = all_found
+                    unassign(word)  , if state(word) = invalid
                  }
 ```
 
